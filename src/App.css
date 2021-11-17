@@ -1,11 +1,11 @@
 .banner {
-  background: #f5f5da;
-  padding: 30px;
+  background: #1D3557;
+  padding: 5px;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 2px;
 }
 .banner-title {
-  color: #2d3d29;
+  color: #FFFFFF;
 }
 
 .home {
@@ -21,11 +21,9 @@
   display: inline-block;
   border-radius: 10px;
 }
-.cat {
-  display: inline-block;
-  width: 45%;
+.cat { 
+  width: 20%;
 }
-.dog {
-  display: inline-block;
-  width: 45%;
+.dog {  
+  width: 20%;
 }

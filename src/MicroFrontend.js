@@ -4,8 +4,7 @@ function MicroFrontend({ name, host, history }) {
   useEffect(() => {
     const scriptId = `micro-frontend-script-${name}`;
 
-    const renderMicroFrontend = () => {
-      
+    const renderMicroFrontend = () => {      
       window[`render${name}`](`${name}-container`, history);
     };
 

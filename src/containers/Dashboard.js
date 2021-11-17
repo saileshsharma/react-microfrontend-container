@@ -14,7 +14,8 @@ const {
 function Header() {
   return (
     <div className="banner">
-      <h1 className="banner-title">Hi there!, this is container app built using MicroFrontend</h1>      
+      <h1 className="banner-title">&#128571; Cats and Dogs &#128021;</h1>
+      <h4>Random pics of cats and dogs</h4>
     </div>
   );
 }
@@ -26,8 +27,12 @@ function Dogs({ history }) {
 
 /*Call the dogs MicroFrontend through MicroFrontend  JS*/
 function Contents({ history }) {
+  console.log("Inside Contents Inside Contents Inside Contents Inside Contents");
   return <MicroFrontend history={history} host={contentsHost} name="Contents" />;
 }
+
+
+
 
 
 function Cats({ history }) {
@@ -56,21 +61,22 @@ function Home({ history }) {
     <div>
       <Header />
       <div className="home">
-        <div><Contents /></div>
-          <div className="cat"><Cats />
-          <div className="dogs"><Dogs /></div>
-            <div>
-              <input
-                placeholder="Input a message to Cat"
-                defaultValue={input}
-                onBlur={(e) => setInput(e.target.value)}
-              />
-              <button onClick={handleOnClick}>Greet Me</button>
-              </div>
-              </div>
-              
-            </div>
+        <input
+          placeholder="Insert a greeting"
+          defaultValue={input}
+          onBlur={(e) => setInput(e.target.value)}
+        />
+        <button onClick={handleOnClick}>Greet Me</button>
       </div>
+
+      <div className="home">
+        <div className="content">
+          <div className="cat"><Cats /></div>
+          <div className="cat"><Dogs /></div>
+          <div className="cat"><Contents /></div>
+        </div>
+      </div>
+    </div>
   );
 }
 

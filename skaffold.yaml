@@ -1,0 +1,16 @@
+apiVersion: skaffold/v1
+kind: Config
+build:
+  tagPolicy:
+    sha256: {}
+  artifacts:
+    - image: my-organization.docker.pkg.sehlat.io/my-app
+      docker:
+        target: prod
+deploy:
+  kubectl:
+    manifests:
+      - kubernetes-manifests/*.yaml
+    flags:
+      global: # additional flags passed on every command.
+        - --namespace=my-namespace
